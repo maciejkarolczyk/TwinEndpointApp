@@ -11,11 +11,13 @@ class UsersTableViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var users: Users = Users()
+    var dataSource: [BaseUser] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.dataSource = self
+        self.title = "GitHub/Dailymotion Users"
+        setupTableView()
+        
         let queryOne = QueryObject(requestType: .git)
         let queryTwo = QueryObject(requestType: .dailyMotion)
         
@@ -24,40 +26,55 @@ class UsersTableViewController: BaseViewController {
                 print(error)
             }
             if let gitHubUsers = gitHubUsers {
-                self.users.gitHub = gitHubUsers
+                self.dataSource.append(contentsOf: gitHubUsers)
             }
             if let dailyMotionUsers = dailyMotionResponse?.users {
-                self.users.dailymotion = dailyMotionUsers
+                self.dataSource.append(contentsOf: dailyMotionUsers)
             }
-//            DispatchQueue.main.async {
-//                self.tableView.reloadData()
-//            }
-            
+            self.changeLoading(false)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
-
-
+    
+    private func setupTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.separatorStyle = .none
+    }
 }
 
 extension UsersTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let count = users.gitHub.count + users.dailymotion.count
-        count == 0 ? setNoFavoritesView() : tableView.restoreNormalView()
-        return count
+        dataSource.count == 0 ? setNoFavoritesView() : tableView.restoreNormalView()
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ArticleTableViewCell
-//        cell.delegate = self
-//        cell.selectionStyle = .none
-//        cell.articleModel = articles?[indexPath.row]
-//        cell.changeAbstractLength(shouldExpand: expandedIndexSet.contains(indexPath.row))
-//        return cell
-        return UITableViewCell()
+        let model = dataSource[indexPath.row]
+        let cell:UITableViewCell
+        switch model.modelType {
+        case .git:
+            cell = tableView.dequeueReusableCell(withIdentifier: "GitHubUserCell", for: indexPath) as! GitHubUserCell
+            (cell as! GitHubUserCell).setupCell(model as! GitHubUserElement)
+        case .dailyMotion:
+            cell = tableView.dequeueReusableCell(withIdentifier: "DailymotionUserCell", for: indexPath) as! DailymotionUserCell
+            (cell as! DailymotionUserCell).setupCell(model as! DailyMotionUser)
+        }
+        cell.selectionStyle = .none
+        return cell
     }
     
     func setNoFavoritesView() {
         tableView.setEmptyView(title: "no users", message: "description")
+    }
+}
+
+extension UsersTableViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = dataSource[indexPath.row]
+        //create detailsController and push
     }
 }
 

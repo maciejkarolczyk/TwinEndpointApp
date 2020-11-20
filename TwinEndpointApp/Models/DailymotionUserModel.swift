@@ -23,9 +23,10 @@ struct DailyMotionUserResponse: Codable {
 }
 
 // MARK: - DailyMotionUser
-struct DailyMotionUser: Codable {
+struct DailyMotionUser: BaseUser, Codable {
     let avatarUrl: String
     let username: String
+    var modelType: UserType = .dailyMotion
 
     enum CodingKeys: String, CodingKey {
         case avatarUrl = "avatar_360_url"

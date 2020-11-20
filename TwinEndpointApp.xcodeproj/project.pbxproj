@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,7 +22,9 @@
 		09D0CDCA2567C0F900ED7A66 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDC92567C0F900ED7A66 /* BaseViewController.swift */; };
 		09D0CDD02567CDA500ED7A66 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDCF2567CDA500ED7A66 /* Users.swift */; };
 		09D0CDD72567D0BB00ED7A66 /* tableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDD62567D0BB00ED7A66 /* tableViewExtension.swift */; };
-		09D0CDDC2567D58900ED7A66 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDDB2567D58900ED7A66 /* UserCell.swift */; };
+		09D0CDDC2567D58900ED7A66 /* GitHubUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDDB2567D58900ED7A66 /* GitHubUserCell.swift */; };
+		09D0CDEC2567E28400ED7A66 /* DailymotionUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDEB2567E28400ED7A66 /* DailymotionUserCell.swift */; };
+		5F7D55F5B83F1D9E5955AF30 /* Pods_TwinEndpointApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C8DD65051F0761692F9E62 /* Pods_TwinEndpointApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +45,11 @@
 		09D0CDC92567C0F900ED7A66 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		09D0CDCF2567CDA500ED7A66 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		09D0CDD62567D0BB00ED7A66 /* tableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewExtension.swift; sourceTree = "<group>"; };
-		09D0CDDB2567D58900ED7A66 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		09D0CDDB2567D58900ED7A66 /* GitHubUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserCell.swift; sourceTree = "<group>"; };
+		09D0CDEB2567E28400ED7A66 /* DailymotionUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailymotionUserCell.swift; sourceTree = "<group>"; };
+		0BA8D1E1D391FC50C580EBE4 /* Pods-TwinEndpointApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinEndpointApp.release.xcconfig"; path = "Target Support Files/Pods-TwinEndpointApp/Pods-TwinEndpointApp.release.xcconfig"; sourceTree = "<group>"; };
+		28B8F6D0E9BA52ABFC90951A /* Pods-TwinEndpointApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinEndpointApp.debug.xcconfig"; path = "Target Support Files/Pods-TwinEndpointApp/Pods-TwinEndpointApp.debug.xcconfig"; sourceTree = "<group>"; };
+		87C8DD65051F0761692F9E62 /* Pods_TwinEndpointApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwinEndpointApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F7D55F5B83F1D9E5955AF30 /* Pods_TwinEndpointApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +69,8 @@
 			children = (
 				09D0CD912566CE2200ED7A66 /* TwinEndpointApp */,
 				09D0CD902566CE2200ED7A66 /* Products */,
+				32A33E0FBDD30E7A00149F48 /* Pods */,
+				0D876E9E5B93EDBD3744AF27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +141,27 @@
 		09D0CDD92567D46C00ED7A66 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				09D0CDDB2567D58900ED7A66 /* UserCell.swift */,
+				09D0CDDB2567D58900ED7A66 /* GitHubUserCell.swift */,
+				09D0CDEB2567E28400ED7A66 /* DailymotionUserCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		0D876E9E5B93EDBD3744AF27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87C8DD65051F0761692F9E62 /* Pods_TwinEndpointApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32A33E0FBDD30E7A00149F48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28B8F6D0E9BA52ABFC90951A /* Pods-TwinEndpointApp.debug.xcconfig */,
+				0BA8D1E1D391FC50C580EBE4 /* Pods-TwinEndpointApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09D0CDA32566CE2600ED7A66 /* Build configuration list for PBXNativeTarget "TwinEndpointApp" */;
 			buildPhases = (
+				4C05123EEBE8979525A72821 /* [CP] Check Pods Manifest.lock */,
 				09D0CD8B2566CE2200ED7A66 /* Sources */,
 				09D0CD8C2566CE2200ED7A66 /* Frameworks */,
 				09D0CD8D2566CE2200ED7A66 /* Resources */,
+				9B46F0AD298867DE1117E8D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,19 +231,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4C05123EEBE8979525A72821 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TwinEndpointApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B46F0AD298867DE1117E8D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwinEndpointApp/Pods-TwinEndpointApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwinEndpointApp/Pods-TwinEndpointApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TwinEndpointApp/Pods-TwinEndpointApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		09D0CD8B2566CE2200ED7A66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				09D0CDAB2566CE5900ED7A66 /* Constants.swift in Sources */,
-				09D0CDDC2567D58900ED7A66 /* UserCell.swift in Sources */,
+				09D0CDDC2567D58900ED7A66 /* GitHubUserCell.swift in Sources */,
 				09D0CDBE2566F18100ED7A66 /* DailymotionUserModel.swift in Sources */,
 				09D0CDAE2566CE7100ED7A66 /* MultiNetworking.swift in Sources */,
 				09D0CDA82566CE3F00ED7A66 /* NetworkLayer.swift in Sources */,
 				09D0CDBA2566F02100ED7A66 /* GithubUserModel.swift in Sources */,
 				09D0CDCA2567C0F900ED7A66 /* BaseViewController.swift in Sources */,
 				09D0CD972566CE2200ED7A66 /* UsersTableViewController.swift in Sources */,
+				09D0CDEC2567E28400ED7A66 /* DailymotionUserCell.swift in Sources */,
 				09D0CD932566CE2200ED7A66 /* AppDelegate.swift in Sources */,
 				09D0CD952566CE2200ED7A66 /* SceneDelegate.swift in Sources */,
 				09D0CDB22566CE9600ED7A66 /* QueryObject.swift in Sources */,
@@ -363,6 +435,7 @@
 		};
 		09D0CDA42566CE2600ED7A66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28B8F6D0E9BA52ABFC90951A /* Pods-TwinEndpointApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -382,6 +455,7 @@
 		};
 		09D0CDA52566CE2600ED7A66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BA8D1E1D391FC50C580EBE4 /* Pods-TwinEndpointApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

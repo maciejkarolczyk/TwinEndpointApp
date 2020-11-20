@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol BaseUser {
+    var modelType: UserType { get set}
+}
+
 class Users {
     
     var gitHub: [GitHubUserElement] = []

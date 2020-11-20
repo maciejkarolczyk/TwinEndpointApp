@@ -19,7 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         let navigation = UINavigationController()
-        navigation.addChild(UsersTableViewController())
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "UsersTableViewController")
+        navigation.addChild(vc)
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
     }
