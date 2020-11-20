@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		09D0CD932566CE2200ED7A66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CD922566CE2200ED7A66 /* AppDelegate.swift */; };
 		09D0CD952566CE2200ED7A66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CD942566CE2200ED7A66 /* SceneDelegate.swift */; };
-		09D0CD972566CE2200ED7A66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CD962566CE2200ED7A66 /* ViewController.swift */; };
+		09D0CD972566CE2200ED7A66 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CD962566CE2200ED7A66 /* UsersTableViewController.swift */; };
 		09D0CD9A2566CE2200ED7A66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D0CD982566CE2200ED7A66 /* Main.storyboard */; };
 		09D0CD9C2566CE2600ED7A66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09D0CD9B2566CE2600ED7A66 /* Assets.xcassets */; };
 		09D0CD9F2566CE2600ED7A66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D0CD9D2566CE2600ED7A66 /* LaunchScreen.storyboard */; };
@@ -19,13 +19,17 @@
 		09D0CDB22566CE9600ED7A66 /* QueryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDB12566CE9600ED7A66 /* QueryObject.swift */; };
 		09D0CDBA2566F02100ED7A66 /* GithubUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDB92566F02100ED7A66 /* GithubUserModel.swift */; };
 		09D0CDBE2566F18100ED7A66 /* DailymotionUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDBD2566F18100ED7A66 /* DailymotionUserModel.swift */; };
+		09D0CDCA2567C0F900ED7A66 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDC92567C0F900ED7A66 /* BaseViewController.swift */; };
+		09D0CDD02567CDA500ED7A66 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDCF2567CDA500ED7A66 /* Users.swift */; };
+		09D0CDD72567D0BB00ED7A66 /* tableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDD62567D0BB00ED7A66 /* tableViewExtension.swift */; };
+		09D0CDDC2567D58900ED7A66 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDDB2567D58900ED7A66 /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		09D0CD8F2566CE2200ED7A66 /* TwinEndpointApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwinEndpointApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D0CD922566CE2200ED7A66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09D0CD942566CE2200ED7A66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		09D0CD962566CE2200ED7A66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		09D0CD962566CE2200ED7A66 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		09D0CD992566CE2200ED7A66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09D0CD9B2566CE2600ED7A66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09D0CD9E2566CE2600ED7A66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		09D0CDB12566CE9600ED7A66 /* QueryObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryObject.swift; sourceTree = "<group>"; };
 		09D0CDB92566F02100ED7A66 /* GithubUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserModel.swift; sourceTree = "<group>"; };
 		09D0CDBD2566F18100ED7A66 /* DailymotionUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailymotionUserModel.swift; sourceTree = "<group>"; };
+		09D0CDC92567C0F900ED7A66 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		09D0CDCF2567CDA500ED7A66 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		09D0CDD62567D0BB00ED7A66 /* tableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewExtension.swift; sourceTree = "<group>"; };
+		09D0CDDB2567D58900ED7A66 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,18 +76,17 @@
 		09D0CD912566CE2200ED7A66 /* TwinEndpointApp */ = {
 			isa = PBXGroup;
 			children = (
+				09D0CDD92567D46C00ED7A66 /* Cells */,
+				09D0CDC82567C0E400ED7A66 /* ViewControllers */,
+				09D0CDC72567BFAF00ED7A66 /* Networking */,
+				09D0CDC62567BEF600ED7A66 /* Utils */,
 				09D0CDB52566CEDC00ED7A66 /* Models */,
 				09D0CD922566CE2200ED7A66 /* AppDelegate.swift */,
 				09D0CD942566CE2200ED7A66 /* SceneDelegate.swift */,
-				09D0CD962566CE2200ED7A66 /* ViewController.swift */,
 				09D0CD982566CE2200ED7A66 /* Main.storyboard */,
 				09D0CD9B2566CE2600ED7A66 /* Assets.xcassets */,
 				09D0CD9D2566CE2600ED7A66 /* LaunchScreen.storyboard */,
 				09D0CDA02566CE2600ED7A66 /* Info.plist */,
-				09D0CDA72566CE3F00ED7A66 /* NetworkLayer.swift */,
-				09D0CDAA2566CE5900ED7A66 /* Constants.swift */,
-				09D0CDAD2566CE7100ED7A66 /* MultiNetworking.swift */,
-				09D0CDB12566CE9600ED7A66 /* QueryObject.swift */,
 			);
 			path = TwinEndpointApp;
 			sourceTree = "<group>";
@@ -87,10 +94,47 @@
 		09D0CDB52566CEDC00ED7A66 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				09D0CDCF2567CDA500ED7A66 /* Users.swift */,
 				09D0CDB92566F02100ED7A66 /* GithubUserModel.swift */,
 				09D0CDBD2566F18100ED7A66 /* DailymotionUserModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		09D0CDC62567BEF600ED7A66 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				09D0CDAA2566CE5900ED7A66 /* Constants.swift */,
+				09D0CDD62567D0BB00ED7A66 /* tableViewExtension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		09D0CDC72567BFAF00ED7A66 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				09D0CDAD2566CE7100ED7A66 /* MultiNetworking.swift */,
+				09D0CDA72566CE3F00ED7A66 /* NetworkLayer.swift */,
+				09D0CDB12566CE9600ED7A66 /* QueryObject.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		09D0CDC82567C0E400ED7A66 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				09D0CDC92567C0F900ED7A66 /* BaseViewController.swift */,
+				09D0CD962566CE2200ED7A66 /* UsersTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		09D0CDD92567D46C00ED7A66 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				09D0CDDB2567D58900ED7A66 /* UserCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,14 +208,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D0CDAB2566CE5900ED7A66 /* Constants.swift in Sources */,
+				09D0CDDC2567D58900ED7A66 /* UserCell.swift in Sources */,
 				09D0CDBE2566F18100ED7A66 /* DailymotionUserModel.swift in Sources */,
 				09D0CDAE2566CE7100ED7A66 /* MultiNetworking.swift in Sources */,
 				09D0CDA82566CE3F00ED7A66 /* NetworkLayer.swift in Sources */,
 				09D0CDBA2566F02100ED7A66 /* GithubUserModel.swift in Sources */,
-				09D0CD972566CE2200ED7A66 /* ViewController.swift in Sources */,
+				09D0CDCA2567C0F900ED7A66 /* BaseViewController.swift in Sources */,
+				09D0CD972566CE2200ED7A66 /* UsersTableViewController.swift in Sources */,
 				09D0CD932566CE2200ED7A66 /* AppDelegate.swift in Sources */,
 				09D0CD952566CE2200ED7A66 /* SceneDelegate.swift in Sources */,
 				09D0CDB22566CE9600ED7A66 /* QueryObject.swift in Sources */,
+				09D0CDD02567CDA500ED7A66 /* Users.swift in Sources */,
+				09D0CDD72567D0BB00ED7A66 /* tableViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

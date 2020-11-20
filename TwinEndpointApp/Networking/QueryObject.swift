@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum RequestType {
+enum UserType {
     case git, dailyMotion
     
     var endpoint:String {
@@ -22,11 +22,11 @@ enum RequestType {
 
 class QueryObject {
     
-    var requestType:RequestType
+    var requestType:UserType
     var parameters: [String : String]?
     var headers: [String : String]?
     
-    internal init(requestType: RequestType, parameters: [String : String]? = nil, headers: [String : String]? = nil) {
+    internal init(requestType: UserType, parameters: [String : String]? = nil, headers: [String : String]? = nil) {
         self.requestType = requestType
         self.parameters = parameters
         self.headers = headers

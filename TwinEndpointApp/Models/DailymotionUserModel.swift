@@ -13,22 +13,22 @@ struct DailyMotionUserResponse: Codable {
     let explicit: Bool
     let total: Int
     let hasMore: Bool
-    let list: [List]
+    let users: [DailyMotionUser]
 
     enum CodingKeys: String, CodingKey {
         case page, limit, explicit, total
         case hasMore = "has_more"
-        case list
+        case users = "list"
     }
 }
 
-// MARK: - List
-struct List: Codable {
-    let avatar360_URL: String
+// MARK: - DailyMotionUser
+struct DailyMotionUser: Codable {
+    let avatarUrl: String
     let username: String
 
     enum CodingKeys: String, CodingKey {
-        case avatar360_URL = "avatar_360_url"
+        case avatarUrl = "avatar_360_url"
         case username
     }
 }
