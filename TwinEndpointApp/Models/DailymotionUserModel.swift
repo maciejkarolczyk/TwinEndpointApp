@@ -32,4 +32,11 @@ struct DailyMotionUser: BaseUser, Codable {
         case avatarUrl = "avatar_360_url"
         case username
     }
+    
+    func getUserName() -> String {return username}
+    func getAvatarUrl() -> String {return avatarUrl}
+    func getNodeId() -> String? {return nil}
+    func getAccountType() -> TypeEnum? {return nil}
+    func getWebSite() -> String? {return nil}
+    func isUserSiteAdmin() -> Bool? {return nil}
 }

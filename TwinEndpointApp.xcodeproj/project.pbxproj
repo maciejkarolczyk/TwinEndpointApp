@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09808004256806D000BB3820 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09808003256806D000BB3820 /* UserDetailsViewController.swift */; };
+		098080082568092F00BB3820 /* RoundedCornersImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098080072568092F00BB3820 /* RoundedCornersImageView.swift */; };
+		0980800B25680ADF00BB3820 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0980800A25680ADF00BB3820 /* Toast.swift */; };
 		09D0CD932566CE2200ED7A66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CD922566CE2200ED7A66 /* AppDelegate.swift */; };
 		09D0CD952566CE2200ED7A66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CD942566CE2200ED7A66 /* SceneDelegate.swift */; };
 		09D0CD972566CE2200ED7A66 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CD962566CE2200ED7A66 /* UsersTableViewController.swift */; };
@@ -22,12 +25,14 @@
 		09D0CDCA2567C0F900ED7A66 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDC92567C0F900ED7A66 /* BaseViewController.swift */; };
 		09D0CDD02567CDA500ED7A66 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDCF2567CDA500ED7A66 /* Users.swift */; };
 		09D0CDD72567D0BB00ED7A66 /* tableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDD62567D0BB00ED7A66 /* tableViewExtension.swift */; };
-		09D0CDDC2567D58900ED7A66 /* GitHubUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDDB2567D58900ED7A66 /* GitHubUserCell.swift */; };
-		09D0CDEC2567E28400ED7A66 /* DailymotionUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDEB2567E28400ED7A66 /* DailymotionUserCell.swift */; };
+		09D0CDDC2567D58900ED7A66 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDDB2567D58900ED7A66 /* UserCell.swift */; };
 		5F7D55F5B83F1D9E5955AF30 /* Pods_TwinEndpointApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C8DD65051F0761692F9E62 /* Pods_TwinEndpointApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09808003256806D000BB3820 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		098080072568092F00BB3820 /* RoundedCornersImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersImageView.swift; sourceTree = "<group>"; };
+		0980800A25680ADF00BB3820 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		09D0CD8F2566CE2200ED7A66 /* TwinEndpointApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwinEndpointApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D0CD922566CE2200ED7A66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09D0CD942566CE2200ED7A66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,8 +50,7 @@
 		09D0CDC92567C0F900ED7A66 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		09D0CDCF2567CDA500ED7A66 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		09D0CDD62567D0BB00ED7A66 /* tableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewExtension.swift; sourceTree = "<group>"; };
-		09D0CDDB2567D58900ED7A66 /* GitHubUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserCell.swift; sourceTree = "<group>"; };
-		09D0CDEB2567E28400ED7A66 /* DailymotionUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailymotionUserCell.swift; sourceTree = "<group>"; };
+		09D0CDDB2567D58900ED7A66 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		0BA8D1E1D391FC50C580EBE4 /* Pods-TwinEndpointApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinEndpointApp.release.xcconfig"; path = "Target Support Files/Pods-TwinEndpointApp/Pods-TwinEndpointApp.release.xcconfig"; sourceTree = "<group>"; };
 		28B8F6D0E9BA52ABFC90951A /* Pods-TwinEndpointApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinEndpointApp.debug.xcconfig"; path = "Target Support Files/Pods-TwinEndpointApp/Pods-TwinEndpointApp.debug.xcconfig"; sourceTree = "<group>"; };
 		87C8DD65051F0761692F9E62 /* Pods_TwinEndpointApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwinEndpointApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +119,8 @@
 			children = (
 				09D0CDAA2566CE5900ED7A66 /* Constants.swift */,
 				09D0CDD62567D0BB00ED7A66 /* tableViewExtension.swift */,
+				098080072568092F00BB3820 /* RoundedCornersImageView.swift */,
+				0980800A25680ADF00BB3820 /* Toast.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -134,6 +140,7 @@
 			children = (
 				09D0CDC92567C0F900ED7A66 /* BaseViewController.swift */,
 				09D0CD962566CE2200ED7A66 /* UsersTableViewController.swift */,
+				09808003256806D000BB3820 /* UserDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -141,8 +148,7 @@
 		09D0CDD92567D46C00ED7A66 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				09D0CDDB2567D58900ED7A66 /* GitHubUserCell.swift */,
-				09D0CDEB2567E28400ED7A66 /* DailymotionUserCell.swift */,
+				09D0CDDB2567D58900ED7A66 /* UserCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -279,14 +285,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D0CDAB2566CE5900ED7A66 /* Constants.swift in Sources */,
-				09D0CDDC2567D58900ED7A66 /* GitHubUserCell.swift in Sources */,
+				09D0CDDC2567D58900ED7A66 /* UserCell.swift in Sources */,
+				0980800B25680ADF00BB3820 /* Toast.swift in Sources */,
 				09D0CDBE2566F18100ED7A66 /* DailymotionUserModel.swift in Sources */,
+				098080082568092F00BB3820 /* RoundedCornersImageView.swift in Sources */,
 				09D0CDAE2566CE7100ED7A66 /* MultiNetworking.swift in Sources */,
 				09D0CDA82566CE3F00ED7A66 /* NetworkLayer.swift in Sources */,
+				09808004256806D000BB3820 /* UserDetailsViewController.swift in Sources */,
 				09D0CDBA2566F02100ED7A66 /* GithubUserModel.swift in Sources */,
 				09D0CDCA2567C0F900ED7A66 /* BaseViewController.swift in Sources */,
 				09D0CD972566CE2200ED7A66 /* UsersTableViewController.swift in Sources */,
-				09D0CDEC2567E28400ED7A66 /* DailymotionUserCell.swift in Sources */,
 				09D0CD932566CE2200ED7A66 /* AppDelegate.swift in Sources */,
 				09D0CD952566CE2200ED7A66 /* SceneDelegate.swift in Sources */,
 				09D0CDB22566CE9600ED7A66 /* QueryObject.swift in Sources */,

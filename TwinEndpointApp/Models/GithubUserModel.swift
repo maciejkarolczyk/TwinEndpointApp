@@ -22,6 +22,13 @@ struct GitHubUserElement: BaseUser, Codable {
     let type: TypeEnum
     let siteAdmin: Bool
     var modelType: UserType = .git
+    
+    func getUserName() -> String {return login}
+    func getAvatarUrl() -> String {return avatarURL}
+    func getNodeId() -> String? {return nodeID}
+    func getAccountType() -> TypeEnum? {return type}
+    func getWebSite() -> String? {return htmlURL}
+    func isUserSiteAdmin() -> Bool? {return siteAdmin}
 
     enum CodingKeys: String, CodingKey {
         case login, id

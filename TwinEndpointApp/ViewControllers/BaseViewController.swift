@@ -44,4 +44,10 @@ class BaseViewController: UIViewController {
             shouldShow ? self.loading.startAnimating() : self.loading.stopAnimating()
         }
     }
+    
+    func displayToast(_ text:String) {
+        DispatchQueue.main.async {
+            Toast.show(message: text, controller: self)
+        }
+    }
 }

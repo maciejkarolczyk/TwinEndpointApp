@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum UserType {
+enum UserType : String {
     case git, dailyMotion
     
     var endpoint:String {
