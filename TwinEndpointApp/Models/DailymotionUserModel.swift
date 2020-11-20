@@ -5,12 +5,10 @@
 //  Created by Karolczyk, Maciej on 19/11/2020.
 //
 
-//   let dailyMotionUserResponse = try? newJSONDecoder().decode(DailyMotionUserResponse.self, from: jsonData)
-
 import Foundation
 
 // MARK: - DailyMotionUserResponse
-struct DailyMotionUserResponse: Codable, BaseProtocol {
+struct DailyMotionUserResponse: Codable {
     let page, limit: Int
     let explicit: Bool
     let total: Int

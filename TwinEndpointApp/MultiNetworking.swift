@@ -9,10 +9,11 @@ import Foundation
 
 class MultiNetworking {
     
-    static func requestMultipleEndpoints<T:Decodable, A:Decodable>(queryItems:[QueryObject], completion: @escaping ((T,A) -> Void), errorBlock : @escaping (String) -> Void) {
+    static func requestMultipleEndpoints<T:Decodable, A:Decodable>(queryItems:[QueryObject], completion: @escaping ((T?,A?,String?) -> Void)) {
         
         var resultOne: T?
         var resultTwo: A?
+        var error: String?
         
         let operationQueue = OperationQueue()
         
@@ -27,7 +28,7 @@ class MultiNetworking {
                         resultOne = response
                         group.leave()
                     } failureHandler: { errorString in
-                        errorBlock(errorString)
+                        error = errorString
                         group.leave()
                     }
                 case .dailyMotion:
@@ -35,7 +36,7 @@ class MultiNetworking {
                         resultTwo = response
                         group.leave()
                     } failureHandler: { errorString in
-                        errorBlock(errorString)
+                        error = errorString
                         group.leave()
                     }
                 }
@@ -44,8 +45,7 @@ class MultiNetworking {
             
         }
         let operation2 = BlockOperation {
-            completion(resultOne!, resultTwo!)
-            
+            completion(resultOne, resultTwo, error)
         }
         operation2.addDependency(operation1)
         operationQueue.addOperations([operation1, operation2], waitUntilFinished: true)

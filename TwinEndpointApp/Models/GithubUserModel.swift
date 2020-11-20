@@ -5,12 +5,10 @@
 //  Created by Karolczyk, Maciej on 19/11/2020.
 //
 
-//   let gitHubUser = try? newJSONDecoder().decode(GitHubUser.self, from: jsonData)
-
 import Foundation
 
 // MARK: - GitHubUserElement
-struct GitHubUserElement: Codable, BaseProtocol {
+struct GitHubUserElement: Codable {
     let login: String
     let id: Int
     let nodeID: String

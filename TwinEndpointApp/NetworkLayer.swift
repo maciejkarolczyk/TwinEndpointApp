@@ -35,7 +35,7 @@ class NetworkLayer {
                     return
                 }
             }
-            errorHandler(Constants.genericError)
+            errorHandler("\(Constants.genericError) \(urlString)")
         }
         
         var components = URLComponents(string: urlString)!

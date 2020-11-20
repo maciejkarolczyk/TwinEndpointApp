@@ -9,7 +9,7 @@ import Foundation
 
 struct Constants {
     
-    static let genericError = "Something went wrong. Please try again later"
+    static let genericError = "Something went wrong with fetching from"
     static let noConnectionError = "Not connected to Internet"
     
     static let dailyMotionEndpoint = "https://api.dailymotion.com/users?fields=avatar_360_url,username"

@@ -19,7 +19,6 @@
 		09D0CDB22566CE9600ED7A66 /* QueryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDB12566CE9600ED7A66 /* QueryObject.swift */; };
 		09D0CDBA2566F02100ED7A66 /* GithubUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDB92566F02100ED7A66 /* GithubUserModel.swift */; };
 		09D0CDBE2566F18100ED7A66 /* DailymotionUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDBD2566F18100ED7A66 /* DailymotionUserModel.swift */; };
-		09D0CDC1256705D900ED7A66 /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDC0256705D900ED7A66 /* ModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 		09D0CDB12566CE9600ED7A66 /* QueryObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryObject.swift; sourceTree = "<group>"; };
 		09D0CDB92566F02100ED7A66 /* GithubUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserModel.swift; sourceTree = "<group>"; };
 		09D0CDBD2566F18100ED7A66 /* DailymotionUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailymotionUserModel.swift; sourceTree = "<group>"; };
-		09D0CDC0256705D900ED7A66 /* ModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +89,6 @@
 			children = (
 				09D0CDB92566F02100ED7A66 /* GithubUserModel.swift */,
 				09D0CDBD2566F18100ED7A66 /* DailymotionUserModel.swift */,
-				09D0CDC0256705D900ED7A66 /* ModelProtocol.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,7 +170,6 @@
 				09D0CDBA2566F02100ED7A66 /* GithubUserModel.swift in Sources */,
 				09D0CD972566CE2200ED7A66 /* ViewController.swift in Sources */,
 				09D0CD932566CE2200ED7A66 /* AppDelegate.swift in Sources */,
-				09D0CDC1256705D900ED7A66 /* ModelProtocol.swift in Sources */,
 				09D0CD952566CE2200ED7A66 /* SceneDelegate.swift in Sources */,
 				09D0CDB22566CE9600ED7A66 /* QueryObject.swift in Sources */,
 			);

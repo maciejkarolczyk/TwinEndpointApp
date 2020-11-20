@@ -15,12 +15,12 @@ class ViewController: UIViewController {
         let queryOne = QueryObject(requestType: .git)
         let queryTwo = QueryObject(requestType: .dailyMotion)
         
-        MultiNetworking.requestMultipleEndpoints(queryItems:[queryOne, queryTwo]) { (gitHubUsers:GitHubUsers, dailyMotionResponse:DailyMotionUserResponse) in
+        MultiNetworking.requestMultipleEndpoints(queryItems:[queryOne, queryTwo]) { (gitHubUsers:GitHubUsers?, dailyMotionResponse:DailyMotionUserResponse?, errorString) in
+            if let error = errorString {
+                print(error)
+            }
             print("done")
-        } errorBlock: { errorString in
-            print(errorString)
         }
-        
     }
 
 
