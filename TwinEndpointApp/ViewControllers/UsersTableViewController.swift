@@ -12,12 +12,24 @@ class UsersTableViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var dataSource: [BaseUser] = []
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Users List"
+        self.title = Constants.mainControllerTitle
         setupTableView()
-        
+        fetchData()
+    }
+    
+    private func setupTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.separatorStyle = .none
+        refreshControl.addTarget(self, action: #selector(fetchData), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+    }
+    
+    @objc func fetchData() {
         let queryOne = QueryObject(requestType: .git)
         let queryTwo = QueryObject(requestType: .dailyMotion)
         
@@ -33,15 +45,10 @@ class UsersTableViewController: BaseViewController {
             }
             self.changeLoading(false)
             DispatchQueue.main.async {
+                self.refreshControl.endRefreshing()
                 self.tableView.reloadData()
             }
         }
-    }
-    
-    private func setupTableView() {
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.separatorStyle = .none
     }
 }
 
@@ -71,7 +78,6 @@ extension UsersTableViewController : UITableViewDelegate {
         let detailsController = storyboard.instantiateViewController(withIdentifier: "UserDetailsViewController") as! UserDetailsViewController
         detailsController.model = model
         self.navigationController?.pushViewController(detailsController, animated: true)
-        //create detailsController and push
     }
 }
 

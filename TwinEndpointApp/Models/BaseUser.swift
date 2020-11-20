@@ -16,9 +16,3 @@ protocol BaseUser {
     func getWebSite() -> String?
     func isUserSiteAdmin() -> Bool?
 }
-
-class Users {
-    
-    var gitHub: [GitHubUserElement] = []
-    var dailymotion: [DailyMotionUser] = []
-}

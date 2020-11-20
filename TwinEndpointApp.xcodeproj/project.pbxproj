@@ -11,7 +11,6 @@
 		098080082568092F00BB3820 /* RoundedCornersImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098080072568092F00BB3820 /* RoundedCornersImageView.swift */; };
 		0980800B25680ADF00BB3820 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0980800A25680ADF00BB3820 /* Toast.swift */; };
 		09D0CD932566CE2200ED7A66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CD922566CE2200ED7A66 /* AppDelegate.swift */; };
-		09D0CD952566CE2200ED7A66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CD942566CE2200ED7A66 /* SceneDelegate.swift */; };
 		09D0CD972566CE2200ED7A66 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CD962566CE2200ED7A66 /* UsersTableViewController.swift */; };
 		09D0CD9A2566CE2200ED7A66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D0CD982566CE2200ED7A66 /* Main.storyboard */; };
 		09D0CD9C2566CE2600ED7A66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09D0CD9B2566CE2600ED7A66 /* Assets.xcassets */; };
@@ -23,7 +22,7 @@
 		09D0CDBA2566F02100ED7A66 /* GithubUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDB92566F02100ED7A66 /* GithubUserModel.swift */; };
 		09D0CDBE2566F18100ED7A66 /* DailymotionUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDBD2566F18100ED7A66 /* DailymotionUserModel.swift */; };
 		09D0CDCA2567C0F900ED7A66 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDC92567C0F900ED7A66 /* BaseViewController.swift */; };
-		09D0CDD02567CDA500ED7A66 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDCF2567CDA500ED7A66 /* Users.swift */; };
+		09D0CDD02567CDA500ED7A66 /* BaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDCF2567CDA500ED7A66 /* BaseUser.swift */; };
 		09D0CDD72567D0BB00ED7A66 /* tableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDD62567D0BB00ED7A66 /* tableViewExtension.swift */; };
 		09D0CDDC2567D58900ED7A66 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDDB2567D58900ED7A66 /* UserCell.swift */; };
 		5F7D55F5B83F1D9E5955AF30 /* Pods_TwinEndpointApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C8DD65051F0761692F9E62 /* Pods_TwinEndpointApp.framework */; };
@@ -35,7 +34,6 @@
 		0980800A25680ADF00BB3820 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		09D0CD8F2566CE2200ED7A66 /* TwinEndpointApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwinEndpointApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D0CD922566CE2200ED7A66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09D0CD942566CE2200ED7A66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		09D0CD962566CE2200ED7A66 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		09D0CD992566CE2200ED7A66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09D0CD9B2566CE2600ED7A66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,7 +46,7 @@
 		09D0CDB92566F02100ED7A66 /* GithubUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserModel.swift; sourceTree = "<group>"; };
 		09D0CDBD2566F18100ED7A66 /* DailymotionUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailymotionUserModel.swift; sourceTree = "<group>"; };
 		09D0CDC92567C0F900ED7A66 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		09D0CDCF2567CDA500ED7A66 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		09D0CDCF2567CDA500ED7A66 /* BaseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUser.swift; sourceTree = "<group>"; };
 		09D0CDD62567D0BB00ED7A66 /* tableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewExtension.swift; sourceTree = "<group>"; };
 		09D0CDDB2567D58900ED7A66 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		0BA8D1E1D391FC50C580EBE4 /* Pods-TwinEndpointApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwinEndpointApp.release.xcconfig"; path = "Target Support Files/Pods-TwinEndpointApp/Pods-TwinEndpointApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 				09D0CDC62567BEF600ED7A66 /* Utils */,
 				09D0CDB52566CEDC00ED7A66 /* Models */,
 				09D0CD922566CE2200ED7A66 /* AppDelegate.swift */,
-				09D0CD942566CE2200ED7A66 /* SceneDelegate.swift */,
 				09D0CD982566CE2200ED7A66 /* Main.storyboard */,
 				09D0CD9B2566CE2600ED7A66 /* Assets.xcassets */,
 				09D0CD9D2566CE2600ED7A66 /* LaunchScreen.storyboard */,
@@ -107,7 +104,7 @@
 		09D0CDB52566CEDC00ED7A66 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				09D0CDCF2567CDA500ED7A66 /* Users.swift */,
+				09D0CDCF2567CDA500ED7A66 /* BaseUser.swift */,
 				09D0CDB92566F02100ED7A66 /* GithubUserModel.swift */,
 				09D0CDBD2566F18100ED7A66 /* DailymotionUserModel.swift */,
 			);
@@ -296,9 +293,8 @@
 				09D0CDCA2567C0F900ED7A66 /* BaseViewController.swift in Sources */,
 				09D0CD972566CE2200ED7A66 /* UsersTableViewController.swift in Sources */,
 				09D0CD932566CE2200ED7A66 /* AppDelegate.swift in Sources */,
-				09D0CD952566CE2200ED7A66 /* SceneDelegate.swift in Sources */,
 				09D0CDB22566CE9600ED7A66 /* QueryObject.swift in Sources */,
-				09D0CDD02567CDA500ED7A66 /* Users.swift in Sources */,
+				09D0CDD02567CDA500ED7A66 /* BaseUser.swift in Sources */,
 				09D0CDD72567D0BB00ED7A66 /* tableViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +446,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9QCT4ZGZ6;
 				INFOPLIST_FILE = TwinEndpointApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +454,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Karolczyk.TwinEndpointApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -470,6 +467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9QCT4ZGZ6;
 				INFOPLIST_FILE = TwinEndpointApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -477,7 +475,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Karolczyk.TwinEndpointApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

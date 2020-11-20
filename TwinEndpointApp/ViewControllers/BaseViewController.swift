@@ -33,7 +33,12 @@ class BaseViewController: UIViewController {
     }
     
     func setupLayout() {
-        self.view.backgroundColor = .systemBackground
+        if #available(iOS 13, *) {
+            self.view.backgroundColor = .systemBackground
+        } else {
+            self.view.backgroundColor = .white
+        }
+        
         view.addSubview(loading)
         loading.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         loading.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true

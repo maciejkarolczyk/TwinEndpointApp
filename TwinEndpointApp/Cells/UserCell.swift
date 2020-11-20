@@ -33,9 +33,9 @@ class UserCell:UITableViewCell {
         nameLabel.text = model.getUserName()
         switch model.modelType {
         case .git:
-            userTypeImage.image = UIImage(named: "github-logo")
+            userTypeImage.image = UIImage(named: Constants.gitHubIcon)
         case .dailyMotion:
-        userTypeImage.image = UIImage(named: "dailymotion-logo")
+            userTypeImage.image = UIImage(named: Constants.dailymotionIcon)
         }
         gitHubUserTypeLabel.text = model.getAccountType()?.rawValue
     }

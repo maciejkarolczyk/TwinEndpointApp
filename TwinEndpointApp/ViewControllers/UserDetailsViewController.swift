@@ -25,6 +25,7 @@ class UserDetailsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = Constants.detailsControllerTitle
         guard let model = model else {return}
         nameLabel.text = model.getUserName()
         avatarImageView.kf.setImage(with: URL(string: model.getAvatarUrl()))
@@ -34,14 +35,13 @@ class UserDetailsViewController: BaseViewController {
             nodeIdLabel.text = model.getNodeId()
             accountType.text = model.getAccountType()?.rawValue
             websiteLabel.text = model.getWebSite()
-            isUserSiteAdminLabel.text = model.isUserSiteAdmin()! ? "Admin" : "just a user"
+            if let isAdmin = model.isUserSiteAdmin() {
+                isUserSiteAdminLabel.text = isAdmin ? "Admin" : "just a user"
+            }
         case .dailyMotion:
             userTypeImageView.image = UIImage(named: "dailymotion-logo")
             detailsStackView.isHidden = true
         }
         changeLoading(false)
-        
     }
-    
-    
 }

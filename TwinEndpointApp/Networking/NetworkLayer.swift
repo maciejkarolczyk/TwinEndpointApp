@@ -27,8 +27,8 @@ class NetworkLayer {
             
             if self.isSuccessCode(urlResponse) {
                 guard let data = data else {
-                    print("Unable to parse the response in given type \(T.self)")
-                    return errorHandler("Unable to parse the response in given type \(T.self)")
+                    print("\(Constants.parsingError) \(T.self)")
+                    return errorHandler("\(Constants.parsingError) \(T.self)")
                 }
                 if let responseObject = try? JSONDecoder().decode(T.self, from: data) {
                     successHandler(responseObject)
