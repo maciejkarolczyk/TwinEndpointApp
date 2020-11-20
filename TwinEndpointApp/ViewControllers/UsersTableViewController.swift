@@ -13,6 +13,8 @@ class UsersTableViewController: BaseViewController {
     
     var dataSource: [BaseUser] = []
     private let refreshControl = UIRefreshControl()
+    private final let cellIdentifier = "UserCell"
+    private final let detailsControllerIdentifier = "UserDetailsViewController"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,14 +62,14 @@ extension UsersTableViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = dataSource[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! UserCell
+        let cell = tableView.dequeueReusableCell(withIdentifier:cellIdentifier, for: indexPath) as! UserCell
         cell.model = model
         cell.selectionStyle = .none
         return cell
     }
     
     func setEmptyView() {
-        tableView.setEmptyView(title: "No users", message: "Something went wrong with downloading users")
+        tableView.setEmptyView(title: Constants.noUsers, message: Constants.noUsersDescription)
     }
 }
 
@@ -75,7 +77,7 @@ extension UsersTableViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = dataSource[indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let detailsController = storyboard.instantiateViewController(withIdentifier: "UserDetailsViewController") as! UserDetailsViewController
+        let detailsController = storyboard.instantiateViewController(withIdentifier: detailsControllerIdentifier) as! UserDetailsViewController
         detailsController.model = model
         self.navigationController?.pushViewController(detailsController, animated: true)
     }

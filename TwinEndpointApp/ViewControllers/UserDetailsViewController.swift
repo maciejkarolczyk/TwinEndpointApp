@@ -31,15 +31,15 @@ class UserDetailsViewController: BaseViewController {
         avatarImageView.kf.setImage(with: URL(string: model.getAvatarUrl()))
         switch model.modelType {
         case .git:
-            userTypeImageView.image = UIImage(named: "github-logo")
+            userTypeImageView.image = UIImage(named: Constants.gitHubIcon)
             nodeIdLabel.text = model.getNodeId()
             accountType.text = model.getAccountType()?.rawValue
             websiteLabel.text = model.getWebSite()
             if let isAdmin = model.isUserSiteAdmin() {
-                isUserSiteAdminLabel.text = isAdmin ? "Admin" : "just a user"
+                isUserSiteAdminLabel.text = isAdmin ? Constants.adminString : Constants.userString
             }
         case .dailyMotion:
-            userTypeImageView.image = UIImage(named: "dailymotion-logo")
+            userTypeImageView.image = UIImage(named: Constants.dailymotionIcon)
             detailsStackView.isHidden = true
         }
         changeLoading(false)
