@@ -7,8 +7,12 @@
 
 import Foundation
 
+enum UserType : String {
+    case git, dailyMotion
+}
+
 protocol BaseUser {
-    var modelType: UserType { get set}
+    var modelType:UserType { get set}
     func getUserName() -> String
     func getAvatarUrl() -> String
     func getNodeId() -> String?

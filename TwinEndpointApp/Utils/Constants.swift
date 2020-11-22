@@ -20,10 +20,6 @@ struct Constants {
     static let gitHubIcon = "github-logo"
     static let dailymotionIcon = "dailymotion-logo"
     
-    // MARK: - Endpoints
-    static let dailyMotionEndpoint = "https://api.dailymotion.com/users?fields=avatar_360_url,username"
-    static let gitHubUsersEndpoint = "https://api.github.com/users"
-    
     static let userString = "Normal User"
     static let adminString = "Admin"
     static let mainControllerTitle = "Users List"

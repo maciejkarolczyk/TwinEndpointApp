@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MultiNetworking
 
 class UsersTableViewController: BaseViewController {
     
@@ -36,9 +37,11 @@ class UsersTableViewController: BaseViewController {
         let queryTwo = QueryObject(requestType: .dailyMotion)
         
         networkLayer.requestMultipleEndpoints(queryItems:[queryOne, queryTwo]) { (gitHubUsers:GitHubUsers?, dailyMotionResponse:DailyMotionUserResponse?, errorString) in
+            self.dataSource = []
             if let error = errorString {
                 self.displayToast(error)
             }
+            // Maciej : in case one of the endpoints fails, app will still display data from the other one
             if let gitHubUsers = gitHubUsers {
                 self.dataSource.append(contentsOf: gitHubUsers)
             }

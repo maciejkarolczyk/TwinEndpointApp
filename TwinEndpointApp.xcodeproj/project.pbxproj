@@ -15,10 +15,7 @@
 		09D0CD9A2566CE2200ED7A66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D0CD982566CE2200ED7A66 /* Main.storyboard */; };
 		09D0CD9C2566CE2600ED7A66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09D0CD9B2566CE2600ED7A66 /* Assets.xcassets */; };
 		09D0CD9F2566CE2600ED7A66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D0CD9D2566CE2600ED7A66 /* LaunchScreen.storyboard */; };
-		09D0CDA82566CE3F00ED7A66 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDA72566CE3F00ED7A66 /* NetworkLayer.swift */; };
 		09D0CDAB2566CE5900ED7A66 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDAA2566CE5900ED7A66 /* Constants.swift */; };
-		09D0CDAE2566CE7100ED7A66 /* MultiNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDAD2566CE7100ED7A66 /* MultiNetworking.swift */; };
-		09D0CDB22566CE9600ED7A66 /* QueryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDB12566CE9600ED7A66 /* QueryObject.swift */; };
 		09D0CDBA2566F02100ED7A66 /* GithubUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDB92566F02100ED7A66 /* GithubUserModel.swift */; };
 		09D0CDBE2566F18100ED7A66 /* DailymotionUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDBD2566F18100ED7A66 /* DailymotionUserModel.swift */; };
 		09D0CDCA2567C0F900ED7A66 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CDC92567C0F900ED7A66 /* BaseViewController.swift */; };
@@ -39,10 +36,7 @@
 		09D0CD9B2566CE2600ED7A66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09D0CD9E2566CE2600ED7A66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09D0CDA02566CE2600ED7A66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09D0CDA72566CE3F00ED7A66 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		09D0CDAA2566CE5900ED7A66 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		09D0CDAD2566CE7100ED7A66 /* MultiNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiNetworking.swift; sourceTree = "<group>"; };
-		09D0CDB12566CE9600ED7A66 /* QueryObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryObject.swift; sourceTree = "<group>"; };
 		09D0CDB92566F02100ED7A66 /* GithubUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserModel.swift; sourceTree = "<group>"; };
 		09D0CDBD2566F18100ED7A66 /* DailymotionUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailymotionUserModel.swift; sourceTree = "<group>"; };
 		09D0CDC92567C0F900ED7A66 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +83,6 @@
 			children = (
 				09D0CDD92567D46C00ED7A66 /* Cells */,
 				09D0CDC82567C0E400ED7A66 /* ViewControllers */,
-				09D0CDC72567BFAF00ED7A66 /* Networking */,
 				09D0CDC62567BEF600ED7A66 /* Utils */,
 				09D0CDB52566CEDC00ED7A66 /* Models */,
 				09D0CD922566CE2200ED7A66 /* AppDelegate.swift */,
@@ -120,16 +113,6 @@
 				0980800A25680ADF00BB3820 /* Toast.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		09D0CDC72567BFAF00ED7A66 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				09D0CDAD2566CE7100ED7A66 /* MultiNetworking.swift */,
-				09D0CDA72566CE3F00ED7A66 /* NetworkLayer.swift */,
-				09D0CDB12566CE9600ED7A66 /* QueryObject.swift */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		09D0CDC82567C0E400ED7A66 /* ViewControllers */ = {
@@ -286,14 +269,11 @@
 				0980800B25680ADF00BB3820 /* Toast.swift in Sources */,
 				09D0CDBE2566F18100ED7A66 /* DailymotionUserModel.swift in Sources */,
 				098080082568092F00BB3820 /* RoundedCornersImageView.swift in Sources */,
-				09D0CDAE2566CE7100ED7A66 /* MultiNetworking.swift in Sources */,
-				09D0CDA82566CE3F00ED7A66 /* NetworkLayer.swift in Sources */,
 				09808004256806D000BB3820 /* UserDetailsViewController.swift in Sources */,
 				09D0CDBA2566F02100ED7A66 /* GithubUserModel.swift in Sources */,
 				09D0CDCA2567C0F900ED7A66 /* BaseViewController.swift in Sources */,
 				09D0CD972566CE2200ED7A66 /* UsersTableViewController.swift in Sources */,
 				09D0CD932566CE2200ED7A66 /* AppDelegate.swift in Sources */,
-				09D0CDB22566CE9600ED7A66 /* QueryObject.swift in Sources */,
 				09D0CDD02567CDA500ED7A66 /* BaseUser.swift in Sources */,
 				09D0CDD72567D0BB00ED7A66 /* tableViewExtension.swift in Sources */,
 			);
