@@ -27,15 +27,15 @@ class UserDetailsViewController: BaseViewController {
         super.viewDidLoad()
         self.title = Constants.detailsControllerTitle
         guard let model = model else {return}
-        nameLabel.text = model.getUserName()
-        avatarImageView.kf.setImage(with: URL(string: model.getAvatarUrl()))
+        nameLabel.text = model.userName
+        avatarImageView.kf.setImage(with: URL(string: model.avatarUrl))
         switch model.modelType {
         case .git:
             userTypeImageView.image = UIImage(named: Constants.gitHubIcon)
-            nodeIdLabel.text = model.getNodeId()
-            accountType.text = model.getAccountType()?.rawValue
-            websiteLabel.text = model.getWebSite()
-            if let isAdmin = model.isUserSiteAdmin() {
+            nodeIdLabel.text = model.nodeId
+            accountType.text = model.accountType?.rawValue
+            websiteLabel.text = model.webSite
+            if let isAdmin = model.isUserSiteAdmin {
                 isUserSiteAdminLabel.text = isAdmin ? Constants.adminString : Constants.userString
             }
         case .dailyMotion:

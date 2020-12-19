@@ -28,16 +28,16 @@ class UserCell:UITableViewCell {
     
     func setupCell() {
         guard let model = model else {return}
-        let url = URL(string: model.getAvatarUrl())
+        let url = URL(string: model.avatarUrl)
         avatar.kf.setImage(with: url)
-        nameLabel.text = model.getUserName()
+        nameLabel.text = model.userName
         switch model.modelType {
         case .git:
             userTypeImage.image = UIImage(named: Constants.gitHubIcon)
         case .dailyMotion:
             userTypeImage.image = UIImage(named: Constants.dailymotionIcon)
         }
-        gitHubUserTypeLabel.text = model.getAccountType()?.rawValue
+        gitHubUserTypeLabel.text = model.accountType?.rawValue
     }
     
 }

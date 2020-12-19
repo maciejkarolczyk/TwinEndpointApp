@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - GitHubUserElement
-struct GitHubUserElementNetworkModel: BaseUser, Codable {
+struct GitHubUserElementNetworkModel: Codable {
     let login: String
     let id: Int
     let nodeID: String
@@ -22,13 +22,6 @@ struct GitHubUserElementNetworkModel: BaseUser, Codable {
     let type: TypeEnum
     let siteAdmin: Bool
     var modelType: UserType = .git
-    
-    var userName: String {return login}
-    var avatarUrl: String {return avatarURL}
-    var nodeId: String? {return nodeID}
-    var accountType: TypeEnum? {return type}
-    var webSite: String? {return htmlURL}
-    var isUserSiteAdmin: Bool? {return siteAdmin}
 
     enum CodingKeys: String, CodingKey {
         case login, id
