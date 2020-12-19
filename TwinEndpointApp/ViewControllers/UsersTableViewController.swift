@@ -36,24 +36,31 @@ class UsersTableViewController: BaseViewController {
         let queryOne = QueryObject(requestType: .git)
         let queryTwo = QueryObject(requestType: .dailyMotion)
         
-        networkLayer.requestMultipleEndpoints(queryItems:[queryOne, queryTwo]) { (gitHubUsers:GitHubUsers?, dailyMotionResponse:DailyMotionUserResponse?, errorString) in
-            self.dataSource = []
+        networkLayer.requestMultipleEndpoints(queryItems: [queryOne, queryTwo]) { (responseDictionary, errorString) in
             if let error = errorString {
                 self.displayToast(error)
             }
-            // Maciej : in case one of the endpoints fails, app will still display data from the other one
+            self.dataSource = []
             var usersModels:[User] = []
-            if let gitHubUsers = gitHubUsers {
-                for gitHubUser in gitHubUsers {
-                    usersModels.append(User(gitHubUser))
+            for (responseType, data) in responseDictionary {
+                switch responseType {
+                case .git:
+                    if let gitHubUser = try? JSONDecoder().decode(GitHubUsers.self, from: data) {
+                        for user in gitHubUser {
+                            usersModels.append(User(user))
+                        }
+                    }
+                case .dailyMotion:
+                    if let dailyMotionResponse = try? JSONDecoder().decode(DailyMotionUserResponse.self, from: data).users {
+                        for dailyMotionUser in dailyMotionResponse {
+                            usersModels.append(User(dailyMotionUser))
+                        }
+                    }
                 }
             }
-            if let dailyMotionUsers = dailyMotionResponse?.users {
-                for dailyMotionUser in dailyMotionUsers {
-                    usersModels.append(User(dailyMotionUser))
-                }
-            }
+            usersModels.sort {$0.userName < $1.userName}
             self.dataSource.append(contentsOf: usersModels)
+            
             self.changeLoading(false)
             DispatchQueue.main.async {
                 self.refreshControl.endRefreshing()
