@@ -42,12 +42,18 @@ class UsersTableViewController: BaseViewController {
                 self.displayToast(error)
             }
             // Maciej : in case one of the endpoints fails, app will still display data from the other one
+            var usersModels:[User] = []
             if let gitHubUsers = gitHubUsers {
-                self.dataSource.append(contentsOf: gitHubUsers)
+                for gitHubUser in gitHubUsers {
+                    usersModels.append(User(gitHubUser))
+                }
             }
             if let dailyMotionUsers = dailyMotionResponse?.users {
-                self.dataSource.append(contentsOf: dailyMotionUsers)
+                for dailyMotionUser in dailyMotionUsers {
+                    usersModels.append(User(dailyMotionUser))
+                }
             }
+            self.dataSource.append(contentsOf: usersModels)
             self.changeLoading(false)
             DispatchQueue.main.async {
                 self.refreshControl.endRefreshing()
