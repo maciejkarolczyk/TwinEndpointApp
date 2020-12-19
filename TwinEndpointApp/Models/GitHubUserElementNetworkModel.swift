@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - GitHubUserElement
-struct GitHubUserElement: BaseUser, Codable {
+struct GitHubUserElementNetworkModel: BaseUser, Codable {
     let login: String
     let id: Int
     let nodeID: String
@@ -23,12 +23,12 @@ struct GitHubUserElement: BaseUser, Codable {
     let siteAdmin: Bool
     var modelType: UserType = .git
     
-    func getUserName() -> String {return login}
-    func getAvatarUrl() -> String {return avatarURL}
-    func getNodeId() -> String? {return nodeID}
-    func getAccountType() -> TypeEnum? {return type}
-    func getWebSite() -> String? {return htmlURL}
-    func isUserSiteAdmin() -> Bool? {return siteAdmin}
+    var userName: String {return login}
+    var avatarUrl: String {return avatarURL}
+    var nodeId: String? {return nodeID}
+    var accountType: TypeEnum? {return type}
+    var webSite: String? {return htmlURL}
+    var isUserSiteAdmin: Bool? {return siteAdmin}
 
     enum CodingKeys: String, CodingKey {
         case login, id
@@ -56,4 +56,4 @@ enum TypeEnum: String, Codable {
     case user = "User"
 }
 
-typealias GitHubUsers = [GitHubUserElement]
+typealias GitHubUsers = [GitHubUserElementNetworkModel]
