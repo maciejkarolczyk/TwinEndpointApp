@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MultiNetworking
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,9 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let navigation = UINavigationController()
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "UsersTableViewController")
-        navigation.addChild(vc)
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "UsersTableViewController") { coder in
+            return UsersTableViewController(coder: coder, networkLayer: MultiNetworkingManager())
+        }
+        navigation.addChild(controller)
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
         return true

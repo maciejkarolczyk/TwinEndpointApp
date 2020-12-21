@@ -9,9 +9,13 @@ import Foundation
 import UIKit
 import MultiNetworking
 
-class BaseViewController: UIViewController {
+protocol NetworkingProtocol {
+    var networkLayer:MultiNetworkingManager { get }
+}
+
+class BaseViewController: UIViewController, NetworkingProtocol {
     
-    var networkLayer : MultiNetworkingManager = MultiNetworkingManager()
+    var networkLayer: MultiNetworkingManager
     let loading: UIActivityIndicatorView = {
         let loading = UIActivityIndicatorView()
         loading.translatesAutoresizingMaskIntoConstraints = false
@@ -19,9 +23,18 @@ class BaseViewController: UIViewController {
         return loading
     }()
     
-    // Maciej: cannot inject networking layer in initWithCoder on iOS < 13.0. Therefore, no dependency injection here
-    required init?(coder: NSCoder) {
+    init?(coder: NSCoder, networkLayer: MultiNetworkingManager) {
+        self.networkLayer = networkLayer
         super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    init(networkLayer: MultiNetworkingManager) {
+        self.networkLayer = networkLayer
+        super.init(nibName: nil, bundle: nil)
     }
     
     override func viewDidLoad() {

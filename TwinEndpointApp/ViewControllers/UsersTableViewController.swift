@@ -93,7 +93,9 @@ extension UsersTableViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = dataSource[indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let detailsController = storyboard.instantiateViewController(withIdentifier: detailsControllerIdentifier) as! UserDetailsViewController
+        let detailsController = storyboard.instantiateViewController(identifier: detailsControllerIdentifier) { coder in
+                    return UserDetailsViewController(coder: coder, networkLayer: MultiNetworkingManager())
+                }
         detailsController.model = model
         self.navigationController?.pushViewController(detailsController, animated: true)
     }
